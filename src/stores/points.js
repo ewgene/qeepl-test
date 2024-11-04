@@ -14,5 +14,10 @@ export const usePointsStore = defineStore("points", {
     async fetchPoints() {
       this.points = pointsLib;
     },
+    getCities() {
+      this.points.forEach((point) => {
+        return point.city;
+      });
+    },
   },
 });
