@@ -1,13 +1,14 @@
 <template>
   <q-page class="flex flex-center">
-    <!--    <q-table
-      v-for="city in points"
-      :key="city.city"
+    <q-table
+      v-for="(city, index) in cities"
+      :key="index"
       flat
       bordered
-      title="city.city"
+      :title="cities[index]"
       :columns="columns"
-    />-->
+      :rows="stores[index]"
+    />
   </q-page>
 </template>
 
